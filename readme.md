@@ -1,8 +1,8 @@
 # Ultimate Game
 
-#### Author: Tim Habersack
+##### Author: Tim Habersack
 
-#### Date: 01/07/2015
+##### Date: 01/07/2015
 
 Ultimate game is a command-line game that plays rock, paper, scissors, lizard, Spock. It is silly.
 

@@ -1,4 +1,4 @@
-# Ultimate Game
+## Ultimate Game
 
 ##### Author: Tim Habersack
 
@@ -12,4 +12,8 @@ To play, run:
 
 Or whichever weapon you prefer. Good luck! 
 
-Licensed under an MIT License
+##### License
+
+Copyright 2015 Tim Habersack
+
+Ultimate Game is released under an MIT license. http://opensource.org/licenses/MIT  

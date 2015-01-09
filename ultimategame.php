@@ -1,9 +1,9 @@
 <?php
 //	Author: 		Tim Habersack / tim.habersack@gmail.com
-//	Date:			01-07-2015
+//	Date:			01-09-2015
 //	Name:			Ultimate Game
-//  Description: 	Command-line game that plays Rock,Paper,Scissors, Lizard, Spock
-//					(See: http://en.wikipedia.org/wiki/Rock-paper-scissors#Additional_weapons)
+//  Description: 	Command-line game that plays rps-15
+//					http://www.umop.com/rps15.htm
 //	Usage:			On the command line, run: 'php ultimategame.php rock' and see what happens!
 
 

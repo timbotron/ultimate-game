@@ -43,7 +43,7 @@ class UltimateGame {
 		{
 			$this->print_message('player_won');
 		}
-		elseif($this->is_victory($this->comp_weapon,$this->player_weapon)) // did comp win?
+		else
 		{
 			$this->print_message('comp_won');
 		}
@@ -51,19 +51,21 @@ class UltimateGame {
 
 	private function is_victory($attacker,$target)
 	{
-		$new_target = (count($this->options) - $attacker) + $target;
-		return $this->victory_maths(0,$new_target);
-		
-
-	}
-
-	private function victory_maths($attacker,$target)
-	{
-		if(($attacker < $target) && ($target <= $attacker+7))
+		if(($attacker < 7))
 		{
-			return true;
+			if(($attacker < $target) && ($target < $attacker+7)) return true;
 		}
-		else return false;
+		else
+		{
+			if($attacker < $target) // attacker and target are in top section
+			{
+				return true;
+			}
+			elseif(((15-$attacker) + $target) < 7) return true; // target is within range of attacker; think rock vs human
+			else return false;
+
+		}
+
 	}
 
 	private function print_message($flag)

@@ -15,7 +15,9 @@ class UltimateGame {
 	
 	function __construct($player_weapon)
 	{
-		$this->options = array('scissors','paper','rock','lizard','spock');
+		$this->options = array(	'human','tree','wolf','sponge','paper','air',
+								'water','dragon','devil','lightning','gun',
+								'rock','fire','scissors','snake');
 
 		// Get keys for player and comp weapons
 		$this->player_weapon = array_search(strtolower($player_weapon), $this->options);
@@ -49,22 +51,18 @@ class UltimateGame {
 
 	private function is_victory($attacker,$target)
 	{
-		$hitting_target = 0;
-		// Does first attack hit?
-		if(!array_key_exists(($attacker + 1), $this->options)) $hitting_target = $attacker - 4;
-		else $hitting_target = $attacker + 1;
+		$new_target = (count($this->options) - $attacker) + $target;
+		return $this->victory_maths(0,$new_target);
+		
 
-		if($hitting_target == $target) return true;
-		else $hitting_target = 0;
+	}
 
-		// Does second attack hit?
-		if(!array_key_exists(($attacker + 3), $this->options)) $hitting_target = $attacker - 2;
-		else $hitting_target = $attacker + 3;
-
-		// Quick Note: 	I could have pulled out this above logic and had in separate method, but I feel like
-		// 				we're already approaching silly levels of abstraction. :)
-
-		if($hitting_target == $target) return true;
+	private function victory_maths($attacker,$target)
+	{
+		if(($attacker < $target) && ($target <= $attacker+7))
+		{
+			return true;
+		}
 		else return false;
 	}
 

@@ -61,7 +61,7 @@ class UltimateGame {
 			{
 				return true;
 			}
-			elseif(((15-$attacker) + $target) < 7) return true; // target is within range of attacker; think rock vs human
+			elseif(((14-$attacker) + $target) < 7) return true; // target is within range of attacker; think rock vs human
 			else return false;
 
 		}
